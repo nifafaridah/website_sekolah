@@ -1,0 +1,44 @@
+MTS ALHIDAYAH - WEBSITE SEKOLAH
+================================
+
+VERSI INI:
+- Struktur backend mengikuti pola project guru: Laravel MVC, route admin + auth, controller sederhana, model Eloquent, Blade @extends/@section, CRUD, upload foto, dan DataTables.
+- Tampilan admin menggunakan gaya Regal dengan warna hijau-kuning logo MTS Alhidayah.
+- CSS dan JavaScript utama tersedia secara lokal di public/ (tidak bergantung pada CDN untuk dashboard dan tabel).
+- Logo sekolah dan foto contoh sudah disediakan.
+
+LOGIN
+-----
+URL: http://127.0.0.1:8000/login
+Email: admin@alhidayah.sch.id
+Password: password
+
+JALANKAN
+--------
+1. Pastikan MySQL/XAMPP/Laragon hidup.
+2. Buka terminal di folder yang berisi file artisan.
+3. Jika database baru:
+   php artisan migrate --seed
+4. Bersihkan cache:
+   php artisan optimize:clear
+5. Jalankan:
+   php artisan serve
+6. Buka:
+   http://127.0.0.1:8000
+
+PENTING
+-------
+Jangan menjalankan migrate:fresh pada database yang sudah berisi data.
+Jika sebelumnya ada project lama, buka folder project ini yang BERISI file artisan.
+Jangan mencampurkan folder resources/public/app dari project lama dengan project ini.
+
+MENU ADMIN
+----------
+Dashboard
+Profil Sekolah
+Guru (CRUD + foto)
+Siswa (CRUD + foto)
+Berita (CRUD + foto)
+Ekstrakurikuler (CRUD + foto)
+Galeri (CRUD + foto)
+Logout
